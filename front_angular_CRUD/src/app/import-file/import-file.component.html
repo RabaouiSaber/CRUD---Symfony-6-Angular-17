@@ -1,0 +1,23 @@
+
+<div class="top-right-button">
+    <button class="navigate-button" (click)="navigateToList()">Afficher la liste des groupes de musique</button>
+  </div>
+  <div class="file-upload-container">
+    <h2 class="upload-title">Vous pouvez télécharger votre fichier ici</h2>
+    <label class="file-input-label" for="fileInput">
+      Choisir un fichier
+      <input
+        type="file"
+        id="fileInput"
+        class="file-input"
+        (change)="onFileSelected($event)"
+      />
+    </label>
+    <h4 class="uploaded-file-name" *ngIf="uploadedFileName">Fichier téléchargé: {{ uploadedFileName }}</h4>
+    <button class="upload-button" (click)="uploadFile()">Télécharger</button>
+    <p class="warning-message" *ngIf="showWarning">Veuillez sélectionner un fichier <b>.xlsx</b> valide.</p>
+  
+  </div>
+  
+  
+  

@@ -1,0 +1,51 @@
+<div class="content">
+    <div class="edit-band-container">
+      <h2>Editer le groupe musical</h2>
+      <form>
+        <div class="form-group">
+          <label for="nomGroupe">Nom du groupe</label>
+          <input type="text" id="nomGroupe" name="nomGroupe" [(ngModel)]="groupeData.nomGroupe" class="form-control wider-input" />
+        </div>
+        <div class="form-group">
+          <label for="origine">Origine</label>
+          <input type="text" id="origine" name="origine" [(ngModel)]="groupeData.origine" class="form-control wider-input" />
+        </div>
+        <div class="form-group">
+          <label for="ville">Ville</label>
+          <input type="text" id="ville" name="ville" [(ngModel)]="groupeData.ville" class="form-control wider-input" />
+        </div>
+        <div class="form-group">
+          <label for="anneeDebut">Année Début</label>
+          <input type="text" id="anneeDebut" name="anneeDebut" [(ngModel)]="groupeData.anneeDebut" class="form-control wider-input" />
+        </div>
+        <p class="warning-message" *ngIf="showWarningDeb">L'année de début ne doit pas dépasser {{now.getFullYear()}}</p>
+        <div class="form-group">
+          <label for="anneeSeparation">Année Séparation</label>
+          <input type="text" id="anneeSeparation" name="anneeSeparation" [(ngModel)]="groupeData.anneeSeparation" class="form-control wider-input" />
+        </div>
+        <p class="warning-message" *ngIf="showWarningSep">L'année de séparation ne doit pas dépasser {{now.getFullYear()}}</p>
+        <div class="form-group">
+          <label for="fondateurs">Fondateurs</label>
+          <input type="text" id="fondateurs" name="fondateurs" [(ngModel)]="groupeData.fondateurs" class="form-control wider-input" />
+        </div>
+        <div class="form-group">
+          <label for="membres">Membres</label>
+          <input type="text" id="membres" name="membres" [(ngModel)]="groupeData.membres" class="form-control wider-input" />
+        </div>
+        <div class="form-group">
+          <label for="courantMusical">Courant musical</label>
+          <input type="text" id="courantMusical" name="courantMusical" [(ngModel)]="groupeData.courantMusical" class="form-control wider-input" />
+        </div>
+        <div class="form-group">
+          <label for="presentation">Présentation</label>
+          <textarea id="presentation" name="presentation" [(ngModel)]="groupeData.presentation" class="form-control wider-input" rows="5"></textarea>
+        </div>
+        <p class="warning-message" *ngIf="showWarningSep">Veuillez vérifier votre formulaire</p>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary save"  (click)="onSubmit()">Enregistrer</button>
+          <button type="submit" class="btn btn-primary cancel" (click)="cancel()">Annuler</button>
+        </div>
+      </form>
+    </div>
+    </div>
+    

@@ -1,0 +1,69 @@
+
+<div class="top-right-button">
+    <button class="navigate-button" (click)="navigateToUpload()">Importer un nouveau fichier</button>
+  </div>
+  
+  <div class="table-container">
+    <h2 style="margin: 15px;">La liste des groupes de musique</h2>
+    <div *ngIf="groupes.length > 0">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nom du groupe</th>
+          <th>Origine</th>
+          <th>Ville</th>
+          <th>Année début</th>
+          <th>Année séparation</th>
+          <th>Fondateurs</th>
+          <th>Membres</th>
+          <th>Courant musical</th>
+          <th>Présenattion</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+  
+      <tbody>
+  
+          <tr *ngFor="let band of groupes" >
+            <td>{{ band.nomGroupe }}</td>
+            <td>{{ band.origine }}</td>
+            <td>{{ band.ville }}</td>
+            <td>{{ band.anneeDebut }}</td>
+            <td>{{ band.anneeSeparation }}</td>
+            <td>{{ band.fondateurs }}</td>
+            <td>{{ band.membres }}</td>
+            <td>{{ band.courantMusical }}</td>
+            <td>{{ band.presentation }}</td>
+            <td>
+              <button class="edit-button" (click)="editGroupe(band.id)">Editer</button>
+              <button class="delete-button" (click)="deleteGroupe(band.id)">Supprimer</button>
+            </td>
+          </tr>
+      </tbody>
+  
+    </table>
+  </div>
+  <div *ngIf="groupes.length === 0">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nom du groupe</th>
+          <th>Origine</th>
+          <th>Ville</th>
+          <th>Année début</th>
+          <th>Année séparation</th>
+          <th>Fondateurs</th>
+          <th>Membres</th>
+          <th>Courant musical</th>
+          <th>Présenattion</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+  
+    </table>
+    <h3 style="color:white; margin: 20px;" >La liste est vide!</h3>
+  
+  </div>
+  </div>
+
+  

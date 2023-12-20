@@ -1,0 +1,92 @@
+.table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: rgb(10, 10, 10);
+  }
+
+
+  .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: rgb(247, 233, 233);
+  }
+  
+  
+  /* Add alternating row background color */
+  .table tbody tr:nth-child(even) {
+    background-color: #161515;
+  }
+
+  .table tbody {
+    background-color: #161515;
+  }
+  
+  /* Add hover effect on table rows */
+  .table tbody tr:hover {
+   /* background-color: #e6e6e6;*/
+  }
+  
+   /* Style the edit button */
+   .edit-button {
+    background-color: #1c73de;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: none;
+    width: 150px;
+  }
+  
+  
+   /* Style the delete button */
+  .delete-button {
+    background-color: red;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: none;
+    width: 150px;
+  }
+  
+  .export-button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .export-button {
+    background-color: #b22ecc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .top-right-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+  
+  .navigate-button {
+    background-color: #14b832;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
